@@ -74,7 +74,7 @@ public class WeatherService {
             weather = saveWeather(weatherDto, countryCode);
         }
 
-        // TODO Handle not found scenario here, in controller advice and unit test
+        // TODO Handle not found scenario, rate limiting and other statuses, in controller advice and unit test
 
         return convertToWeatherResponse(weather);
     }
