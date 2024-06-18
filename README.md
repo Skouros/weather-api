@@ -28,7 +28,7 @@ It's one endpoint that uses h2 database as a cache for an external service. Rate
 * Test cases are sparse. Rate limiter service is decently tested, but I underestimated effort for this piece and didn't allocate enough time. I would not submit this as done ordinarily
 * Since validation is not functioning, there is higher potential for ssrf vulnerabilities. Validation and checking the canonical url should both be done, but I didn't get there
 * Lombock plugin - there is a scenario where an annotation may not be functioning as expected or ignored. [SystemDto.java](src/main/java/com/interview/weatherapi/dto/SystemDto.java)
-* The weather objects from Open Weather Maps (containing descriptions) is shared among responses, is documented, and has meaning. Because of this I assume I have unique key violation issue
+* In the weather objects from Open Weather Maps (containing descriptions) ID is shared among responses, is documented, and has meaning. Because of this I assume I have unique key violation issue
 
 ### Features I didn't get around to
 * TLS, profiles, audit fields
